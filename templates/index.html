@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Website{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>{% block header %}My Website{% endblock %}</h1>
+    </header>
+    <main>
+        {% block content %}
+        <h2>Upload a file</h2>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Upload</button>
+        </form>
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; My Website 2023</p>
+    </footer>
+</body>
+</html>
+
+
+
+
