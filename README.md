@@ -1,2 +1,2 @@
-# web_ml
+# ML app
 Web application for ML tasks
